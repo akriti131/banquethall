@@ -1,0 +1,31 @@
+<%- include('../partials/header'); -%>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to Banquets hall in Jammu!</h1>
+            <p>View our hand-picked Banquet from all Jammu</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/banquets/new">Add new Banquet</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        <% banquets.forEach(function(banquet){ %>
+            <div class="col-md-3 sm-6 ">
+                <div class = "card img-thumbnail " style="width: 18rem;">
+                    <div>
+                        <img class = "card-img-top" src = "<%= banquet.image %>" >
+                    </div>
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <%= banquet.name%></h4>
+                        <a href= "/banquets/<%= banquet.id %>" class = "btn btn-primary">More Info</a>
+                    </div>
+                 </div>
+            </div>
+        <%}); %>
+    </div>
+</div>
+
+<%- include('../partials/footer'); -%>

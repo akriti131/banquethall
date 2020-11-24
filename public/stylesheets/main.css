@@ -1,0 +1,9 @@
+#space{
+    margin-top: 40px;
+}
+.card{
+    width: 45rem;
+}
+.delete-form{
+    display: inline;
+}

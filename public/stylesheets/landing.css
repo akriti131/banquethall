@@ -1,0 +1,81 @@
+body {
+    background-color: #000;
+  }
+
+  #landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+  }
+
+  #landing-header h1 {
+    color: #fff;
+  }
+
+  .slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite; 
+  }
+
+  .slideshow li:nth-child(1) { 
+    background-image: url(https://www.princehotels.com/shinyokohama/wp-content/uploads/sites/8/2019/06/Z7T788%E5%B0%8F.jpg) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://www.mayfairhotels.com/img/Slider/Banquets/Convention/Central%20hall%20Mayfair%20Convention.jpg);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://lh3.googleusercontent.com/proxy/ChNpG46SS2K3cBnhkxbabrtZssu6I5EErt6rgbFzknFVSnenvO7OqPsGwDnHYXVzx6ABAerV9kA_Xchho3ggxZdepZ5q5-bndr-ddkGo6cwENsRMTAFRSSIY8qR6Lny_oh3s7icSRA);
+    animation-delay: 20s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://media.weddingz.in/images/915699df11ac813ec947250deca8b320/santokba-banquet-vile-parle-west-mumbai.jpg);
+    animation-delay: 30s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://res.cloudinary.com/simplotel/image/upload/w_5000,h_3333/x_0,y_522,w_5000,h_2808,r_0,c_crop,q_90,fl_progressive/w_400,f_auto,c_fit/hablis-hotel-chennai/Banquet_at_Hablis_Hotels_Chennai_7_kodssj);
+    animation-delay: 40s; 
+  }
+
+  @keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
+
+  .no-cssanimations .slideshow li {
+	opacity: 1;
+}
